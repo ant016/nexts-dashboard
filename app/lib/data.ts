@@ -17,7 +17,7 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
     // console.log('Fetching revenue data...');
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 3000)); // hacer que tarde 3 segundos en cargar
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
