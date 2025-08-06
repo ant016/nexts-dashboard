@@ -1,3 +1,6 @@
+import '../app/ui/global.css'
+import { lusitana, montserrat } from './ui/fonts';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${montserrat.className} antialiased`}>
+        {children}
+        <footer className={`${lusitana.className} text-center p-4 bg-gray-100`}>
+          © 2023 Acme Corporation. All rights reserved.
+        </footer>
+      </body>
     </html>
   );
 }
